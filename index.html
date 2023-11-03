@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul   class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Products</a>
               </li>
@@ -33,10 +33,16 @@
     </nav>
     <br>
 
+    <!--Add Products Modal Button-->
     <div class="container">
-      <div class="card-group">
-       
-          <div class="card m-2" style="width: 18rem;">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addProdModal">Add Products</button>
+      </div>
+    </div>
+
+      <!--Start of Cards-->
+      <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+          <div class="card m-2" style="width: 350px;">
             <img src="productsImages/rk75.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Royal Kludge RK M75</h5>
@@ -46,21 +52,22 @@
                 Switch colors: Red, Blue, Brown
               </p>
             </div>
-            <div class="card-footer d-flex">
-              <div class="mt-1">
-                Price:
+            <!-- footer -->
+            <div class="card-footer d-flex justify-content-between">
+              <div class="d-flex gap-1">
+                  <p class="my-auto">Price:</p>
+                  <button type="button" class="btn btn-dark">₱ 4,150</button>
               </div>
-              <button type="button" class="btn btn-dark" style="margin-left: 1vh;">₱ 4,150</button>
-              <div class="d-flex justify-content-end" style="margin-left: 13vh;">
-                <button class="btn btn-outline-success" type="submit">Add to Cart</button>
-                <button class="btn btn-outline-primary" type="submit" style="margin-left: 1vh;">♥</button>
+              <div class="d-flex">
+                <button type="button" class="btn btn-outline-success fs-6" style="margin-right: .5vh; margin-left: .5vh;">Add to cart</button>
+                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
               </div>
             </div>
           </div>
         
         
         
-          <div class="card m-2" style="width: 18rem;">
+          <div class="card m-2" style="width: 350px;">
             <img src="productsImages/langtu84.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Langtu LT-84</h5>
@@ -71,22 +78,24 @@
 
               <p>Available Colors: Light Grey, Steel Blue, Light Steel Blue</p>
             </div>
-            <div class="card-footer d-flex">
-              <div class="mt-1">
-                Price:
+            <div class="card-footer d-flex justify-content-between">
+              <div class="d-flex gap-1">
+                <p class="my-auto">
+                  Price:
+                </p>
+                <button type="button" class="btn btn-dark">₱ 2,998</button>
               </div>
-              <button type="button" class="btn btn-dark" style="margin-left: 1vh;">₱ 2,998</button>
-              <div class="d-flex justify-content-end" style="margin-left: 13vh;">
-                <button class="btn btn-outline-success" type="submit">Add to Cart</button>
-                <button class="btn btn-outline-primary" type="submit" style="margin-left: 1vh;">♥</button>
+              <div class="d-flex">
+                <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
               </div>
             </div>
           </div>
         
         
        
-          <div class="card m-2" style="width: 18rem;">
-            <img src="productsImages/m1w.jpg" class="card-img-top" alt="..." style="width:100%; padding:auto;">
+          <div class="card m-2" style="width: 350px;">
+            <img src="productsImages/m1w.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Monsgeek M1W</h5>
               <p class="card-text">MonsGeek First Wireless Aluminum Keyboard Barebone! With its multi-mode connectivity options, 
@@ -98,19 +107,56 @@
                 Available Colors: Black, Silver, Purple
               </p>
             </div>
-            <div class="card-footer d-flex">
-              <div class="mt-1">
-                Price:
+            <div class="card-footer d-flex justify-content-between">
+              <div class="d-flex gap-1">
+                <p class="my-auto">
+                  Price:
+                </p>
+                <button type="button" class="btn btn-dark">₱ 5,940</button>
               </div>
-              <button type="button" class="btn btn-dark" style="margin-left: 1vh;">₱ 5,940</button>
-              <div class="d-flex justify-content-end" style="margin-left: 13vh;">
-                <button class="btn btn-outline-success" type="submit">Add to Cart</button>
-                <button class="btn btn-outline-primary" type="submit" style="margin-left: 1vh;">♥</button>
+              <div class="d-flex">
+                <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
               </div>
             </div>
           </div>
         
-      </div>  
-    </div>
+      </div><!--End of Cards-->
+
+      <!--Start of Add Product Modal Form-->
+      <div class="modal fade" id="addProdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="Product Name">
+                  <label for="floatingInput">Product Name</label>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text">Description</span>
+                  <textarea class="form-control" aria-label="Description"></textarea>
+                </div>
+                <br>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <span class="input-group-text">.00</span>
+                </div>
+                <label>Product image</label>
+                <div class="input-group">
+                  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Add product</button>
+              </div>
+          </div>
+        </div>
+      </div><!--End of AddProductModalForm-->
 </body>
 </html>
