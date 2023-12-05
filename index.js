@@ -88,5 +88,5 @@ function register(email, name, password, confirmPassword, sex, civilStatusValue,
     }
     // Success validation
     //alert(`Welcome ${users[userIndex].name}.`);
-    location.assign("/productsPage.html");
+    location.assign("userPage.html");
   }
