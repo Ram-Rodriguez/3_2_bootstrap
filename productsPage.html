@@ -10,153 +10,184 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">E-commerce</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul   class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Products</a>
-              </li>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search product..." aria-label="Search">
-              </form>
-              <li class="nav-item">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-    <br>
+  <div class="d-flex flex-row vh-100 overflow-auto mh-100 min-vw-20">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white position-static min-vw-20" style="width: 35vh;min-width: 15vh; background-color: #343a40;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-4 navbar-brand">E-commerce</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">
+            Sales
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="productsPage.html" class="nav-link text-white">
+            Products
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">
+            Cart
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="userPage.html" class="nav-link text-white">
+            User Settings
+          </a>
+        </li>
+      </ul>
+      <hr>
 
-    <!--Add Products Modal Button-->
-    <div class="container">
-      <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addProdModal">Add Products</button>
-      </div>
+      <a href="index.html" class="nav-link text-white">
+        Logout
+      </a>
     </div>
 
-      <!--Start of Cards-->
-      <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
-          <div class="card m-2" style="width: 350px;">
-            <img src="productsImages/rk75.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Royal Kludge RK M75</h5>
-              <p class="card-text">75% RGB Mechanical Keyboard RK75: 75% layout with 81 keys, which saves 25% of the pc gaming keyboards 
-                space and makes the desktop more concise. This gaming keyboard is a boutique equipment for PC gamers and office users!
-                <br><br>
-                Switch colors: Red, Blue, Brown
-              </p>
-            </div>
-            <!-- footer -->
-            <div class="card-footer d-flex justify-content-between">
-              <div class="d-flex gap-1">
-                  <p class="my-auto">Price:</p>
-                  <button type="button" class="btn btn-dark">₱ 4,150</button>
-              </div>
-              <div class="d-flex">
-                <button type="button" class="btn btn-outline-success fs-6" style="margin-right: .5vh; margin-left: .5vh;">Add to cart</button>
-                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
-              </div>
-            </div>
-          </div>
-        
-        
-        
-          <div class="card m-2" style="width: 350px;">
-            <img src="productsImages/langtu84.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Langtu LT-84</h5>
-              <p class="card-text">LANGTU LT-84 Sandwich Mount 84-key Tri-Mode connection (Bluetooth 5.0 + 2.4gHz + type-c) 100% how-swappable 
-                RGB LED backlit ergonomic mechanical keyboard ft. self-lubricating switches, LED display, N-key rollover, sound insulation foam, 
-                high capacity battery & rotary knob for gaming & office
-              </p>
+    <div class="d-flex flex-column vw-100">
+      <div class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark overflow-auto">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto p-3">
+            <p class="h5 text-white text-center m-2">Welcome, User</p>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search product..." aria-label="Search">
+            </form>    
+            <li class="nav-item"></li>      
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </li>              
+          </ul>                    
+        </nav>
+      </div>
 
-              <p>Available Colors: Light Grey, Steel Blue, Light Steel Blue</p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <div class="d-flex gap-1">
-                <p class="my-auto">
-                  Price:
-                </p>
-                <button type="button" class="btn btn-dark">₱ 2,998</button>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
-                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
-              </div>
-            </div>
-          </div>
-        
-        
-       
-          <div class="card m-2" style="width: 350px;">
-            <img src="productsImages/m1w.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Monsgeek M1W</h5>
-              <p class="card-text">MonsGeek First Wireless Aluminum Keyboard Barebone! With its multi-mode connectivity options, 
-                including 2.4GHz wireless, Bluetooth, and USB-C wired connection, users are no longer limited in how they can connect. 
-                Say goodbye to restrictions and embrace the ultimate typing experience!
-              </p>
-
-              <p>
-                Available Colors: Black, Silver, Purple
-              </p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <div class="d-flex gap-1">
-                <p class="my-auto">
-                  Price:
-                </p>
-                <button type="button" class="btn btn-dark">₱ 5,940</button>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
-                <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
-              </div>
-            </div>
-          </div>
-        
-      </div><!--End of Cards-->
-
-      <!--Start of Add Product Modal Form-->
-      <div class="modal fade" id="addProdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-        <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add a product</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="Product Name">
-                  <label for="floatingInput">Product Name</label>
-                </div>
-                <div class="input-group">
-                  <span class="input-group-text">Description</span>
-                  <textarea class="form-control" aria-label="Description"></textarea>
-                </div>
-                <br>
-                <div class="input-group mb-3">
-                  <span class="input-group-text">$</span>
-                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                  <span class="input-group-text">.00</span>
-                </div>
-                <label>Product image</label>
-                <div class="input-group">
-                  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Add product</button>
-              </div>
+      <div class="screen overflow-auto mt-1">
+        <!--Add Products Modal Button-->
+        <div class="container">
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addProdModal">Add Products</button>
           </div>
         </div>
-      </div><!--End of AddProductModalForm-->
+
+        <!--Start of Cards-->
+        <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/rk75.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Royal Kludge RK M75</h5>
+                  <p class="card-text">75% RGB Mechanical Keyboard RK75: 75% layout with 81 keys, which saves 25% of the pc gaming keyboards 
+                    space and makes the desktop more concise. This gaming keyboard is a boutique equipment for PC gamers and office users!
+                    <br><br>
+                    Switch colors: Red, Blue, Brown
+                  </p>
+                </div>
+                <!-- footer -->
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                      <p class="my-auto">Price:</p>
+                      <button type="button" class="btn btn-dark">₱ 4,150</button>
+                  </div>
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-outline-success fs-6" style="margin-right: .5vh; margin-left: .5vh;">Add to cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/langtu84.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Langtu LT-84</h5>
+                  <p class="card-text">LANGTU LT-84 Sandwich Mount 84-key Tri-Mode connection (Bluetooth 5.0 + 2.4gHz + type-c) 100% how-swappable 
+                    RGB LED backlit ergonomic mechanical keyboard ft. self-lubricating switches, LED display, N-key rollover, sound insulation foam, 
+                    high capacity battery & rotary knob for gaming & office
+                  </p>
+
+                  <p>Available Colors: Light Grey, Steel Blue, Light Steel Blue</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                    <p class="my-auto">
+                      Price:
+                    </p>
+                    <button type="button" class="btn btn-dark">₱ 2,998</button>
+                  </div>
+                  <div class="d-flex">
+                    <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/m1w.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Monsgeek M1W</h5>
+                  <p class="card-text">MonsGeek First Wireless Aluminum Keyboard Barebone! With its multi-mode connectivity options, 
+                    including 2.4GHz wireless, Bluetooth, and USB-C wired connection, users are no longer limited in how they can connect. 
+                    Say goodbye to restrictions and embrace the ultimate typing experience!
+                  </p>
+
+                  <p>
+                    Available Colors: Black, Silver, Purple
+                  </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                    <p class="my-auto">
+                      Price:
+                    </p>
+                    <button type="button" class="btn btn-dark">₱ 5,940</button>
+                  </div>
+                  <div class="d-flex">
+                    <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            
+        </div><!--End of Cards-->
+
+        <!--Start of Add Product Modal Form-->
+        <div class="modal fade" id="addProdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="Product Name">
+                      <label for="floatingInput">Product Name</label>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text">Description</span>
+                      <textarea class="form-control" aria-label="Description"></textarea>
+                    </div>
+                    <br>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">$</span>
+                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                    <label>Product image</label>
+                    <div class="input-group">
+                      <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Add product</button>
+                  </div>
+              </div>
+            </div>
+        </div><!--End of AddProductModalForm-->
+      </div>
+    </div>
+     
+    <br>
+  </div>
+
+
 </body>
 </html>
