@@ -90,3 +90,12 @@ function register(email, name, password, confirmPassword, sex, civilStatusValue,
     //alert(`Welcome ${users[userIndex].name}.`);
     location.assign("userPage.html");
   }
+
+let userPage = document.addEventListener("load", getInfo())
+
+
+function getInfo() {
+    let user = JSON.parse(localStorage.getItem("users")),
+    name = user[0].name;
+    document.querySelector("#txtWelcomeBanner").innerHTML = `Welcome, ${name}`
+}
