@@ -1,9 +1,4 @@
-$(function () { 
-    $("#datepicker").datepicker({  
-        autoclose: true,  
-        todayHighlight: true, 
-    }).datepicker('update', new Date()); 
-}); 
+
 
 let btnRegister = document.querySelector("#btnRegister");
 
@@ -20,7 +15,7 @@ btnRegister.onclick = () => {
     confirmPassword = document.querySelector(
       "#txtRegisterConfirmPassword"
     ).value,
-    birthdate = document.querySelector("#birthdate").value,
+    birthdate = document.querySelector("#startDate").value,
     sexRadios = document.querySelectorAll(".sex");
     for (i = 0; i < sexRadios.length; i++) {
         if (sexRadios[i].checked)
@@ -28,7 +23,7 @@ btnRegister.onclick = () => {
     }
     
     
-  register(email, name, password, confirmPassword, sex, civilStatus, address, birthdate);
+  register(email, name, password, confirmPassword, sex, civilStatusValue, address, birthdate);
 };
 
 btnLogin.onclick = function () {
@@ -82,20 +77,21 @@ function register(email, name, password, confirmPassword, sex, civilStatusValue,
     let userIndex = users.findIndex((u) => {
       return u.email == email && u.password == password;
     });
-  
+
     if (userIndex == -1) {
         return alert(`Email or password is invalid.`);
     }
     // Success validation
     //alert(`Welcome ${users[userIndex].name}.`);
+
     location.assign("userPage.html");
   }
 
-let userPage = document.addEventListener("load", getInfo())
+//let userPage = document.addEventListener("load", getInfo())
 
 
-function getInfo() {
+/*function getInfo() {
     let user = JSON.parse(localStorage.getItem("users")),
     name = user[0].name;
     document.querySelector("#txtWelcomeBanner").innerHTML = `Welcome, ${name}`
-}
+}*/
