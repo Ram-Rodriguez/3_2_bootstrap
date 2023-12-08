@@ -1,5 +1,3 @@
-
-
 let btnRegister = document.querySelector("#btnRegister");
 
 let btnLogin = document.querySelector("#btnLogin");
@@ -21,8 +19,7 @@ btnRegister.onclick = () => {
         if (sexRadios[i].checked)
             sex = sexRadios[i].value;
     }
-    
-    
+        
   register(email, name, password, confirmPassword, sex, civilStatusValue, address, birthdate);
 };
 
