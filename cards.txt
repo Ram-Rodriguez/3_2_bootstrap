@@ -1,0 +1,78 @@
+<!--Start of Cards-->
+        <div class="d-flex justify-content-center" style="flex-wrap: wrap;" id="card-parent">
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/rk75.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Royal Kludge RK M75</h5>
+                  <p class="card-text">75% RGB Mechanical Keyboard RK75: 75% layout with 81 keys, which saves 25% of the pc gaming keyboards 
+                    space and makes the desktop more concise. This gaming keyboard is a boutique equipment for PC gamers and office users!
+                    <br><br>
+                    Switch colors: Red, Blue, Brown
+                  </p>
+                </div>
+                <!-- footer -->
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                      <p class="my-auto">Price:</p>
+                      <button type="button" class="btn btn-dark">₱ 4,150</button>
+                  </div>
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-outline-success fs-6" style="margin-right: .5vh; margin-left: .5vh;">Add to cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/langtu84.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Langtu LT-84</h5>
+                  <p class="card-text">LANGTU LT-84 Sandwich Mount 84-key Tri-Mode connection (Bluetooth 5.0 + 2.4gHz + type-c) 100% how-swappable 
+                    RGB LED backlit ergonomic mechanical keyboard ft. self-lubricating switches, LED display, N-key rollover, sound insulation foam, 
+                    high capacity battery & rotary knob for gaming & office
+                  </p>
+
+                  <p>Available Colors: Light Grey, Steel Blue, Light Steel Blue</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                    <p class="my-auto">
+                      Price:
+                    </p>
+                    <button type="button" class="btn btn-dark">₱ 2,998</button>
+                  </div>
+                  <div class="d-flex">
+                    <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="card m-2" style="width: 350px;">
+                <img src="productsImages/m1w.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Monsgeek M1W</h5>
+                  <p class="card-text">MonsGeek First Wireless Aluminum Keyboard Barebone! With its multi-mode connectivity options, 
+                    including 2.4GHz wireless, Bluetooth, and USB-C wired connection, users are no longer limited in how they can connect. 
+                    Say goodbye to restrictions and embrace the ultimate typing experience!
+                  </p>
+
+                  <p>
+                    Available Colors: Black, Silver, Purple
+                  </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="d-flex gap-1">
+                    <p class="my-auto">
+                      Price:
+                    </p>
+                    <button type="button" class="btn btn-dark">₱ 5,940</button>
+                  </div>
+                  <div class="d-flex">
+                    <button class="btn btn-outline-success" type="submit" style="margin-right: .5vh; margin-left: .5vh;">Add to Cart</button>
+                    <button type="button" class="btn btn-outline-primary" style="padding-left: 2vh; padding-right: 2vh;"><svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            
+        </div><!--End of Cards-->

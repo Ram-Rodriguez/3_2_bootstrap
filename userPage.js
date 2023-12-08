@@ -5,7 +5,7 @@
     }).datepicker('update', new Date()); 
 }); */
 
-let userPage = document.addEventListener("load", getInfo())
+let userPage = document.addEventListener("load", getInfo());
 let btnUpdate = document.querySelector("#btnUpdate");
 let btnSave = document.querySelector("#btnSave");
 let btnConfirmDelete = document.querySelector("#btnConfirmDelete");

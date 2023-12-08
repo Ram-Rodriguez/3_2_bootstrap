@@ -1,3 +1,5 @@
+let productsPage = document.addEventListener("load", getProducts());
+
 btnAddProduct = document.querySelector("#btnAddProduct");
 
 //Tried using this para sa converting into base64
@@ -24,6 +26,10 @@ btnAddProduct.onclick = () => {
 
     addProduct(productName, description, price, productImage);
 };
+
+
+
+
 
 function addProduct(productName, description, price, productImage){
     let cardParent = document.querySelector("#card-parent");
@@ -69,7 +75,6 @@ function addProduct(productName, description, price, productImage){
 
     let cardText = document.createElement("p");
     cardText.className = "card-text";
-    cardText.innerHTML = description;
 
     let cardFooter = document.createElement("div");
     cardFooter.className = "card-footer d-flex justify-content-between";
@@ -96,29 +101,20 @@ function addProduct(productName, description, price, productImage){
     btnAddToCart.style.marginLeft = ".5vh";
     btnAddToCart.innerHTML = "Add to cart";
 
-    let btnHeart = document.createElement("btn");
-    btnHeart.type = "button";
-    btnHeart.className = "btn btn-outline-primary";
-    btnHeart.style.paddingLeft = "2vh";
-    btnHeart.style.paddingRight = "2vh";
+    let btnDelete = document.createElement("btn");
+    btnDelete.type = "button";
+    btnDelete.className = "btn btn-outline-danger";
+    btnDelete.style.paddingLeft = "2vh";
+    btnDelete.style.paddingRight = "2vh";
 
-    let svg = document.createElement("svg");
-    svg.xlmns = "http://www.w3.org/2000/svg";
-    svg.height = ".8em";
-    svg.viewBox = "0 0 512 512";
+    let image = document.createElement("img");
+    image.src = "deleteIcon.png";
+    image.height = "20";
     
-    let style = document.createElement("style");
-    style.innerHTML = "svg{fill:#005eff}";
-
-    let path = document.createElement("path");
-    path.d = "M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z";
-    
-    btnHeart.appendChild(svg);
-    btnHeart.appendChild(style);
-    btnHeart.appendChild(path);
+    btnDelete.appendChild(image);
 
     buttonDiv.appendChild(btnAddToCart);
-    buttonDiv.appendChild(btnHeart);
+    buttonDiv.appendChild(btnDelete);
 
     priceDiv.appendChild(priceText);
     priceDiv.appendChild(priceValue);
@@ -127,11 +123,143 @@ function addProduct(productName, description, price, productImage){
     cardFooter.appendChild(buttonDiv);
 
     cardBody.appendChild(title);
-    cardBody.appendChild(cardText);
 
     card.appendChild(img);
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
 
     cardParent.appendChild(card);
+
+    location.reload();
+    
+}
+
+function getProducts() {
+    let products = JSON.parse(localStorage.getItem("products"));
+
+    if (!products) {
+        let screen = document.querySelector(".screen");
+
+        let empty = document.createElement("div");
+        empty.className = "d-flex justify-content-center";
+
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "Empty Product List";
+
+        empty.appendChild(h1);
+        screen.appendChild(empty);
+    } else {
+        for (let index = 0; index < products.length; index++) {
+            console.log(`This is iteration ${index}`);
+            let cardParent = document.querySelector("#card-parent");
+    
+            let card = document.createElement("div");
+            card.style.width = "350px";
+            card.className = "card m-2";
+            card.id = `${index}`;
+            card.setAttribute("onclick", `showInfo(${index})`);
+            card.setAttribute("data-bs-toggle", "modal");
+            card.setAttribute("data-bs-target", "#infoModal");
+    
+            let img = document.createElement("img");
+            img.src = products[index].productImage;
+            img.className = "card-img-top";
+    
+            let cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+    
+            let title = document.createElement("h5");
+            title.className = "card-title";
+            title.innerHTML = products[index].productName;
+    
+            let cardFooter = document.createElement("div");
+            cardFooter.className = "card-footer d-flex justify-content-between";
+    
+            let priceDiv = document.createElement("div");
+            priceDiv.className = "d-flex gap-1";
+    
+            let priceText = document.createElement("p");
+            priceText.className = "my-auto";
+            priceText.innerHTML = "Price:"
+    
+            let priceValue = document.createElement("button");
+            priceValue.type = "button";
+            priceValue.className = "btn btn-dark";
+            priceValue.innerHTML = `₱ ${products[index].price}`;
+    
+            let buttonDiv = document.createElement("div");
+            buttonDiv.className = "d-flex";
+    
+            let btnAddToCart = document.createElement("btn");
+            btnAddToCart.type = "button";
+            btnAddToCart.className = "btn btn-outline-success fs-6 addToCart";
+            btnAddToCart.style.marginRight = ".5vh";
+            btnAddToCart.style.marginLeft = ".5vh";
+            btnAddToCart.innerHTML = "Add to cart";
+    
+            let btnDelete = document.createElement("btn");
+            btnDelete.type = "button";
+            btnDelete.className = "btn btn-outline-danger";
+            btnDelete.setAttribute("onclick", `deleteProduct(${index})`);
+            btnDelete.setAttribute("id", `${index}`);
+            btnDelete.style.paddingLeft = "2vh";
+            btnDelete.style.paddingRight = "2vh";
+        
+            let image = document.createElement("img");
+            image.src = "deleteIcon.png";
+            image.height = "20";
+            
+            btnDelete.appendChild(image);
+        
+            buttonDiv.appendChild(btnAddToCart);
+            buttonDiv.appendChild(btnDelete);
+    
+            priceDiv.appendChild(priceText);
+            priceDiv.appendChild(priceValue);
+    
+            cardFooter.appendChild(priceDiv);
+            cardFooter.appendChild(buttonDiv);
+    
+            cardBody.appendChild(title);
+    
+            card.appendChild(img);
+            card.appendChild(cardBody);
+            card.appendChild(cardFooter);
+    
+            cardParent.appendChild(card);
+
+            //btnDelete = document.querySelector(`#id${index}`);
+        }
+    }
+
+    //location.reload();
+}
+
+function deleteProduct(index) {
+    console.log(`removing index ${index}`)
+
+    let products = localStorage.getItem("products");
+    
+    products = JSON.parse(products);
+
+    products.splice(index, 1);
+    localStorage.setItem("products", JSON.stringify(products));
+
+    alert("Product has been deleted");
+
+    location.reload();
+}
+
+function showInfo(index){
+    let products = JSON.parse(localStorage.getItem("products")),
+    name = products[index].productName,
+    description = products[index].description,
+    price = products[index].price,
+    img = products[index].src;
+    
+    document.querySelector("#infoProductName").value = `${name}`;
+    document.querySelector("#infoDescription").value = `${description}`;
+    document.querySelector("#infoPrice").value = `${price}`;
+    document.querySelector("#infoImgProduct").src = `${img}`;
+
 }
